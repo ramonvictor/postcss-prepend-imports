@@ -1,0 +1,36 @@
+{
+  "name": "postcss-prepend-imports",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to automatically import global dependencies",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "import",
+    "variables"
+  ],
+  "author": "Ramon Victor <ramon.wd@gmail.com>",
+  "license": "MIT",
+  "repository": "ramonvictor/postcss-prepend-imports",
+  "bugs": {
+    "url": "https://github.com/ramonvictor/postcss-prepend-imports/issues"
+  },
+  "homepage": "https://github.com/ramonvictor/postcss-prepend-imports",
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
