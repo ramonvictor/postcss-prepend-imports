@@ -33,7 +33,7 @@ gulp.task('css', function() {
 **Variables file example**
 
 ```css
-/* ./src/partials/color.css */
+/* ./shared/color.css */
 :root {
     --background-default: #ccc;
 }
