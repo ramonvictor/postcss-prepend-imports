@@ -9,7 +9,7 @@
     "import",
     "variables"
   ],
-  "author": "Ramon Victor <ramon.wd@gmail.com>",
+  "author": "@ramonvictor",
   "license": "MIT",
   "repository": "ramonvictor/postcss-prepend-imports",
   "bugs": {
