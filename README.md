@@ -56,6 +56,7 @@ gulp.task('css', function() {
     background: #ccc;
 }
 ```
+> Above snippet is the output when we use postcss-prepend-imports together with postcss-import and postcss-custom-properties.
 
 ## Usage
 
