@@ -82,5 +82,5 @@ Type: `array` (default: `[]`)
 
 List of file names to prepend in all css files using `@import`.
 
-
+------------------------------------
 See [PostCSS] docs for examples for your environment.
