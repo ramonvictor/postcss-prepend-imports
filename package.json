@@ -22,7 +22,9 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-postcss": "^2.0.2",
-    "jest": "^20.0.0"
+    "jest": "^20.0.0",
+    "postcss-custom-properties": "^6.1.0",
+    "postcss-import": "^10.0.0"
   },
   "scripts": {
     "test": "jest && eslint *.js"

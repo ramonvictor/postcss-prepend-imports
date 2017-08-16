@@ -8,12 +8,20 @@ That's quite useful when you need to preload variables in all css files.
 [ci-img]:  https://travis-ci.org/ramonvictor/postcss-prepend-imports.svg
 [ci]:      https://travis-ci.org/ramonvictor/postcss-prepend-imports
 
+**Disclaimer**
+
+It's advised to use this plugin in combination with both [postcss-import](https://github.com/postcss/postcss-import) and [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties).
+
 **Example using Gulp**
+
 ```js
 gulp.task('css', function() {
     return gulp.src('./src/*.css')
         .pipe(postcss([
-            require('postcss-prepend-imports')(['partials/color.css']),
+            require('postcss-prepend-imports')({
+                path: 'shared',
+                files: ['color.css']
+            }),
             require('postcss-import')(),
             require('postcss-custom-properties')()
         ]))
@@ -23,6 +31,7 @@ gulp.task('css', function() {
 ```
 
 **Variables file example**
+
 ```css
 /* ./src/partials/color.css */
 :root {
@@ -31,6 +40,7 @@ gulp.task('css', function() {
 ```
 
 **Input**
+
 ```css
 /* ./src/main.css */
 .main {
@@ -39,6 +49,7 @@ gulp.task('css', function() {
 ```
 
 **Output**
+
 ```css
 /* ./build/main.css */
 .main {
@@ -49,7 +60,27 @@ gulp.task('css', function() {
 ## Usage
 
 ```js
-postcss([ require('postcss-prepend-imports') ])
+var options = {
+    path: '__tests__/fixtures',
+    files: ['colors.css']
+};
+
+postcss([ require('postcss-prepend-imports')(options) ])
 ```
+
+## Options
+
+#### path
+
+Type: `string` (default: `''`)
+
+Set the root folder where `postcss-prepend-imports` plugin should to find the files to prepend.
+
+#### files
+
+Type: `array` (default: `[]`)
+
+List of file names to prepend in all css files using `@import`.
+
 
 See [PostCSS] docs for examples for your environment.
