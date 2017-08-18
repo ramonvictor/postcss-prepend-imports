@@ -81,7 +81,7 @@ postcss([ require('postcss-prepend-imports')(options) ])
 
 Type: `string` (default: `''`)
 
-Set the root folder where `postcss-prepend-imports` plugin should to find the files to prepend.
+Set the root folder where `postcss-prepend-imports` plugin should find files to prepend.
 
 #### files
 
