@@ -4,9 +4,9 @@
 
 That's quite useful when you need to preload variables in all css files.
 
-[PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/ramonvictor/postcss-prepend-imports.svg
-[ci]:      https://travis-ci.org/ramonvictor/postcss-prepend-imports
+[postcss]: https://github.com/postcss/postcss
+[ci-img]: https://travis-ci.org/ramonvictor/postcss-prepend-imports.svg
+[ci]: https://travis-ci.org/ramonvictor/postcss-prepend-imports
 
 **Disclaimer**
 
@@ -16,18 +16,20 @@ It's advised to use this plugin in combination with both [postcss-import](https:
 
 ```js
 gulp.task('css', function() {
-    return gulp.src('./src/*.css')
-        .pipe(postcss([
-            require('postcss-prepend-imports')({
-                path: 'shared',
-                files: ['color.css']
-            }),
-            require('postcss-import')(),
-            require('postcss-custom-properties')()
-        ]))
+    return gulp
+        .src('./src/*.css')
+        .pipe(
+            postcss([
+                require('postcss-prepend-imports')({
+                    path: 'shared',
+                    files: ['color.css']
+                }),
+                require('postcss-import')(),
+                require('postcss-custom-properties')()
+            ])
+        )
         .pipe(gulp.dest('./build'));
 });
-
 ```
 
 **Variables file example**
@@ -56,6 +58,7 @@ gulp.task('css', function() {
     background: #ccc;
 }
 ```
+
 > Above snippet is the output when we use **postcss-prepend-imports** together with **postcss-import** and **postcss-custom-properties**.
 
 ## Installation
@@ -72,7 +75,7 @@ var options = {
     files: ['colors.css']
 };
 
-postcss([ require('postcss-prepend-imports')(options) ])
+postcss([require('postcss-prepend-imports')(options)]);
 ```
 
 ## Options
@@ -89,5 +92,12 @@ Type: `array` (default: `[]`)
 
 List of file names to prepend in all css files using `@import`.
 
-------------------------------------
+#### afterAllImports
+
+Type: `boolean` (default: `false`)
+
+Add import to file after latest `@import`. 
+
+---
+
 See [PostCSS] docs for examples for your environment.
