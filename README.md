@@ -4,7 +4,7 @@
 
 That's quite useful when you need to preload variables in all css files.
 
-[postcss]: https://github.com/postcss/postcss
+[PostCSS]: https://github.com/postcss/postcss
 [ci-img]: https://travis-ci.org/ramonvictor/postcss-prepend-imports.svg
 [ci]: https://travis-ci.org/ramonvictor/postcss-prepend-imports
 
