@@ -30,6 +30,9 @@
     "test": "jest && eslint *.js"
   },
   "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2015
+    },
     "extends": "eslint-config-postcss/es5",
     "env": {
       "jest": true
